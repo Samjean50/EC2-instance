@@ -4,11 +4,11 @@
 
 #### Purpose
 
-This project provides a step-by-step guide for setting up an Amazon EC2 instance, which serves as a cloud-based Linux server. By following this guide, users will learn how to launch, configure, and access an EC2 instance on AWS, supporting cloud-based development, hosting, and server management.
+In this project i will be setting up an Amazon EC2 instance, which serves as a cloud-based Linux server. i will launch, configure, and access an EC2 instance on AWS, supporting cloud-based development, hosting, and server management.
 
 #### Requirements
 
-The setup includes the following:
+It includes the following:
 
 - Cloud Computing Environment:
 
@@ -29,7 +29,7 @@ The setup includes the following:
 
 ### Use Case
 
-This guide is designed for developers, DevOps engineers, and cloud computing enthusiasts who need a scalable and secure Linux server in the cloud. By setting up an EC2 instance, users can:
+This is useful for developers, DevOps engineers, and cloud computing enthusiasts who need a scalable and secure Linux server in the cloud. By setting up an EC2 instance, i can:
 
 - Deploy and manage cloud-based applications.
 
@@ -43,49 +43,49 @@ This guide is designed for developers, DevOps engineers, and cloud computing ent
 
 1. Sign in to AWS Console:
 
-- Navigate to AWS Console.
+- I navigated to AWS Console.
 
-- Log in to your AWS account.
+- Logged into my AWS account.
 
 2. Open EC2 Dashboard:
 
-- In the AWS Management Console, search for EC2.
+- In the AWS Management Console, i searched for EC2.
 
-- Click Instances > Launch Instance.
+- Clicked Instances > Launch Instance.
 ![New-instance](images/new-instance.png)
 
 3. Choose an Amazon Machine Image (AMI):
 
-- Select Amazon Linux 2 or Ubuntu 20.04 as the preferred AMI.
+- I selected Ubuntu 20.04 as the preferred AMI.
 
 4. Choose an Instance Type:
 
-- Select t2.micro (eligible for free tier) or a suitable instance type based on your needs.
+- I selected t2.micro (eligible for free tier).
 
 Configure Instance Details:
 
-- Leave default settings or adjust based on network and availability zone preferences.
+- I left the default settings.
 
 5. Add Storage:
 
-- Default 8GB root volume is sufficient, but you can modify storage based on requirements.
+- I used te default 8GB root volume as it is sufficient.
 
 6. Configure Security Group:
 
-- Allow SSH (port 22) from your IP for secure access.
+- I allowed SSH (port 22) from my IP for secure access.
 
 - (Optional) Allow HTTP (port 80) and HTTPS (port 443) if hosting a website.
 
 7. Create or Select an SSH Key Pair:
 
-- Select Create a new key pair or Use an existing key pair.
+- I selected and created a new key pair.
 
-- Download the .pem file and store it securely.
+- Downloaded the .pem file and saved it securely.
 ![Launch-instance](images/launch-instance.png)
 
 8. Launch the Instance:
 
-- Click Launch Instance and wait for the status to change to "Running".
+- Clicked Launch Instance and waited for the status to change to "Running".
 ![suceess](images/launch-succes.png)
 
 #### Troubleshooting
@@ -100,22 +100,18 @@ Configure Instance Details:
 
 1. Find Public IP:
 
-- In the EC2 dashboard, select the running instance and note the Public IPv4 Address.
+- In the EC2 dashboard, i selected the running instance and noted the Public IPv4 Address.
  ![suceess](images/public-ip.png)
 
 - Set Permissions for SSH Key:
 
-2. Run the following command in your terminal:
+2. Ran the following command in my terminal:
 
 ```chmod 400 your-key.pem```
 
 3. Connect Using SSH:
 
-Use the following command:
-
-```ssh -i your-key.pem ec2-user@your-public-ip```
-
-For Ubuntu instances, use:
+Used the following command:
 
 ```ssh -i your-key.pem ubuntu@your-public-ip```
 
@@ -129,16 +125,12 @@ For Ubuntu instances, use:
 
 - Update System Packages
 
-Run the following commands after connecting to the instance:
+Ran the following commands after connecting to the instance:
 
-```sudo yum update -y # For Amazon Linux```
 ```sudo apt update -y   # For Ubuntu```
 
 - Install Common Utilities
-
-```sudo yum install -y git wget unzip```
 ```sudo apt install -y git wget unzip```
-```sudo yum install tree```
 ```sudo apt install tree```
 
 
@@ -150,5 +142,5 @@ Web server not accessible? Ensure security group allows HTTP/HTTPS traffic.
 
 ### Conclusion
 
-By following these steps, you have successfully created, connected to, and configured an AWS EC2 instance. This Linux server can now be used for hosting applications, managing cloud-based workloads, and running development environments. Ensuring security and proper configurations will help maintain a reliable cloud-based server setup.
+I have successfully created, connected to, and configured an AWS EC2 instance. This server can now be used for hosting applications, managing cloud-based workloads, and running development environments. Ensuring security and proper configurations will help maintain a reliable cloud-based server setup.
 
